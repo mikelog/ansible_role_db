@@ -5,6 +5,9 @@
 *.tfvars
 .terraform/
 *.retry
+__pycache__/
+*.pyc
 jdauphant.nginx
 vagrant_env
 variables.json
+.yamllint
