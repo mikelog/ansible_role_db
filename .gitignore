@@ -12,3 +12,5 @@ vagrant_env
 variables.json
 .yamllint
 secrets.tar
+google_compute_engine
+moonlit-watch-219508*.json

@@ -2,7 +2,7 @@ language: python
 python:
 - '3.6'
 install:
-- pip install ansible==2.3.0 molecule apache-libcloud
+- pip install ansible==2.7.1 molecule==2.19.0 apache-libcloud pycrypto
 env:
   matrix:
   - GCE_CREDENTIALS_FILE="$(pwd)/moonlit-watch-219508-3e24e1b38cc1.json"
@@ -17,8 +17,6 @@ before_install:
 - mv google_compute_engine /home/travis/.ssh/
 - chmod 0600 /home/travis/.ssh/google_compute_engine
 - echo $GCE_PROJECT_ID
-install:
-- pip install ansible==2.7.1 molecule==2.19.0 apache-libcloud pycrypto
 script:
 - molecule create
 - molecule converge
