@@ -11,3 +11,4 @@ jdauphant.nginx
 vagrant_env
 variables.json
 .yamllint
+secrets.tar
