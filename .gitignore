@@ -14,3 +14,4 @@ variables.json
 secrets.tar
 google_compute_engine
 moonlit-watch-219508*.json
+credentials.json
