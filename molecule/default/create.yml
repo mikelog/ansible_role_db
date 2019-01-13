@@ -10,7 +10,7 @@
     ssh_identity_file: "~/.ssh/google_compute_engine"
     # ssh_identity_file: ~/.ssh/appuser
   tasks:
-    - name: Create molecule instance(s)
+    - name: Create molecule instances
       gce:
         instance_names: "{{ item.name }}"
         zone: "{{ item.zone }}"
