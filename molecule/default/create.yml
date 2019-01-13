@@ -32,7 +32,6 @@
       retries: 300
       with_items: "{{ server.results }}"
 
-    # Mandatory configuration for Molecule to function.
 
     - name: Populate instance config dict
       set_fact:
