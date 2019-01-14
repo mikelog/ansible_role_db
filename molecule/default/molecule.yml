@@ -6,7 +6,7 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: instance-ansible4
+  - name: instance-travis
     zone: europe-west1-b
     machine_type: f1-micro
     image_family: ubuntu-1604-lts
