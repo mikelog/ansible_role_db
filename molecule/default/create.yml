@@ -5,11 +5,14 @@
   # no_log: "{{ not (lookup('env', 'MOLECULE_DEBUG') | bool or molecule_yml.provisioner.log|default(false) | bool) }}"
   vars:
     ssh_port: 22
-    ssh_user: "{{ lookup('env', 'USER') }}"
+    ssh_user: "{{ lookup('env','USER') }}"
     # ssh_user: appuser
     ssh_identity_file: "~/.ssh/google_compute_engine"
     # ssh_identity_file: ~/.ssh/appuser
   tasks:
+    - debug: msg="{{ lookup('env','GCE_SERVICE_ACCOUNT_EMAIL') }} is an environment variable"
+    - debug: msg="{{ lookup('env','GCE_CREDENTIALS_FILE') }} is an env var"
+    - debug: msg="{{ lookup('env','GCE_PROJECT_ID') }} is an env var"
     - name: Create molecule instances
       gce:
         instance_names: "{{ item.name }}"
