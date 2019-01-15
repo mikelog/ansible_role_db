@@ -60,6 +60,8 @@
       when: server.changed | bool
 
     - name: Wait for SSH
+    - debug: msg="ssh port is {{ ssh_port }} ."
+    - debug: msg="ssh addr is {{ item.address }} ."  
       wait_for:
         port: "{{ ssh_port }}"
         host: "{{ item.address }}"
