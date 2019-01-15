@@ -34,8 +34,6 @@
       until: gce_jobs.finished
       retries: 300
       with_items: "{{ server.results }}"
-
-
     - name: Populate instance config dict
       set_fact:
         instance_conf_dict: {
@@ -58,7 +56,6 @@
         content: "{{ instance_conf | to_json | from_json | molecule_to_yaml | molecule_header }}"
         dest: "{{ molecule_instance_config }}"
       when: server.changed | bool
-
     - name: Wait for SSH
     - debug: msg="ssh port is {{ ssh_port }} ."
     - debug: msg="ssh addr is {{ item.address }} ."  
