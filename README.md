@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/mikelog/ansible_role_db.svg?branch=master)](https://travis-ci.com/mikelog/ansible_role_db)
+[![Build Status](https://travis-ci.com/mikelog/db.svg?branch=master)](https://travis-ci.com/mikelog/db)
 
 
 v1
